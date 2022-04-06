@@ -11,4 +11,28 @@ class Pub:
     def add_money_to_till(self, price):
         self.till_value += price
 
-    
+    def add_drink_to_stock(self, drink):
+        self.drinks.append(drink)
+
+    def remove_drink_from_stock(self, drink):
+        self.drinks.remove(drink)
+
+    def sell_drink_to_customer(self, drink, customer):
+        customer.reduce_wallet(drink.price)
+        self.add_money_to_till(drink.price)
+        self.remove_drink_from_stock(drink)
+        customer.give_customer_drink(drink)
+
+
+        
+        
+
+    # def sell_drink_to_customer()
+
+        # def sell_pet_to_customer(self, name, customer):
+        # pet = self.find_pet_by_name(name)
+        # customer.reduce_cash(pet.price)
+        # self.increase_total_cash(pet.price)
+        # self.increase_pets_sold()
+        # self.remove_pet(pet)
+        # customer.add_pet(pet)
