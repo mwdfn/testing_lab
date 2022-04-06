@@ -6,7 +6,7 @@ from src.customer import Customer
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
-        self.customer = Customer("Dave", 20)
+        self.customer = Customer("Dave", 20, 56)
 
     #@unittest.skip("Delete this line to run the test")
 
@@ -30,3 +30,10 @@ class TestCustomer(unittest.TestCase):
     def test_give_drink_to_customer(self):
         self.customer.give_customer_drink("Tennents")
         self.assertEqual(1, self.customer.customer_drinks())
+
+# EXTENSION
+
+    #@unittest.skip("Delete this line to run the test")
+    def test_customer_age(self):
+        self.assertEqual(56, self.customer.age)
+

@@ -23,6 +23,12 @@ class Pub:
         self.remove_drink_from_stock(drink)
         customer.give_customer_drink(drink)
 
+# EXTENSIONS
+
+    def check_customer_age(self, age):
+        if age >= 18:
+            return True
+
 
         
         
